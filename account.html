@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="skorohod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="dist/libs.css"/>
+    <link rel="stylesheet" href="dist/bundle.css"/>
+
+</head>
+<body>
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col-md-4">Скороход</div>
+        <div class="col-md-8">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-2">
+                        <a ui-sref="main">Приложения</a>
+                    </div>
+                    <div class="col-md-2">Документация</div>
+                    <div class="col-md-2">Приложения</div>
+                    <div class="col-md-2">
+                        <div class="button">Выход</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="insets invisible">
+    <li>
+        <a ui-sref="analitics" data-ng-click="open(1)">Аналитика</a>
+    </li>
+    <li>
+        <a ui-sref="data" data-ng-click="open(2)">Данные</a>
+    </li>
+    <li>
+        <a ui-sref="server-code" data-ng-click="open(3)">Серверный код</a>
+    </li>
+    <li>
+        <a ui-sref="push" data-ng-click="open(4)">Push</a>
+    </li>
+    <li data-ng-click="open(5)">
+        <a ui-sref="settings" >Настройки</a>
+    </li>
+</ul>
+<div ui-view></div>
+
+<script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script type="text/javascript" src="dist/app.js"></script>
+</body>
+</html>
